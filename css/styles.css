@@ -3,11 +3,17 @@
   --mainhead-color: #212121;
   --maintext-color: #757575;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 body {
   font-family: 'Raleway', sans-serif;
   font-family: 'Roboto', sans-serif;
   color: #212121;
   background-color: #ffffff;
+  margin: 0;
   /**#212121 - header-text**/
   /**#757575 - main-text**/
   /**#2196f3 - accent-color**/
@@ -17,24 +23,59 @@ body {
 .listdrop {
   list-style: none;
 }
+.nav-list {
+  display: flex;
+  padding-top: 35px;
+  margin-top: 0px;
+  padding-left: 93px;
+}
+.nav-contacts {
+  display: inline-flex;
+  margin: 0;
+  padding-top: 35px;
+  padding-left: 344px;
+}
+.header-block {
+  display: inline-flex;
+  width: 1600px;
+}
+/*.navv {
+  display: inline-flex;
+  margin-left: 215px;
+}*/
+/*.nav-list {
+  display: inline-flex;
+  margin-top: 32px;
+  margin-left: 188px;
+  gap: 50px;
+}
+.nav-contacts {
+  margin-top: 32px;
+  display: inline-flex;
+  gap: 50px;
+  margin-left: 344px;
+  margin-right: 215px;
+}
 /*header*/
 .logo-hd1 {
   font-family: Raleway;
-  font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-decoration: none;
+  padding-top: 25px;
+  padding-left: 210px;
 
   color: var(--accent-color);
 }
 .logo-hd2 {
   font-family: Raleway;
-  font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-decoration: none;
+  padding-top: 25px;
+  margin-top: 0px;
 
   color: #000000;
 }
@@ -44,6 +85,7 @@ body {
   line-height: 1.15;
   letter-spacing: 0.02em;
   text-decoration: none;
+  padding-right: 50px;
 
   color: var(--mainhead-color);
 }
@@ -53,6 +95,7 @@ body {
   line-height: 1.15;
   letter-spacing: 0.02em;
   text-decoration: none;
+  padding-right: 50px;
 
   color: var(--maintext-color);
 }
@@ -75,6 +118,8 @@ body {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-align: center;
 
   color: #ffffff;
 }
@@ -83,13 +128,15 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-
+  display: block;
   cursor: pointer;
   border-radius: 4px;
-
+  text-align: center;
+  letter-spacing: 0.06em;
   color: #ffffff;
   background-color: var(--accent-color);
 }
+
 .hero-btn:hover,
 .hero-btn:focus {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -108,16 +155,10 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.m-tittle {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
-
-  color: var(--mainhead-color);
+.benef-list {
+  display: inline-flex;
 }
 .benef-list .benef-header {
-  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -132,9 +173,28 @@ body {
 
   color: var(--maintext-color);
 }
+.m-tittle {
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  color: var(--mainhead-color);
+}
+.task-list {
+  display: inline-flex;
+}
 /*team*/
 .team-box {
   background-color: #f5f4fa;
+}
+.m2-tittle {
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  color: var(--mainhead-color);
 }
 .team-list .team-member {
   background-color: #ffffff;
@@ -157,51 +217,158 @@ body {
 
   color: var(--maintext-color);
 }
+.team-list {
+  display: inline-flex;
+  text-align: center;
+}
+/* !@!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/*.team-list {
+  text-align: center;
+  display: flex;
+  padding: 15px;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  /* Make a flex container multiline */
+/*flex-wrap: wrap;
+  /* Set gap between rows and columns */
+/*gap: 30px;
+  padding: 0;
+}
 /*footer*/
 .footer-box {
   background-color: #2f303a;
+  width: 1600;
 }
 .logo-ft1 {
   font-family: Raleway;
-  font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: 1.2;
   letter-spacing: 0.03em;
   text-decoration: none;
-
-  color: var(--accent-color);
-}
-.logo-ft2 {
-  font-family: Raleway;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  text-decoration: none;
+  padding-left: 210px;
+  padding-top: 60px;
+  display: block;
 
   color: #ffffff;
 }
+.logo-ft2 {
+  font-family: Raleway;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--accent-color);
+}
 .footer-list .adress-link {
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   text-decoration: none;
+  padding-bottom: 5px;
+  display: block;
 
   color: #ffffff;
 }
 .footer-list .footer-link {
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   /* or 171% */
   letter-spacing: 0.03em;
   text-decoration: none;
+  display: block;
 
   color: rgba(255, 255, 255, 0.6);
+}
+.footer-list {
+  margin-top: 0px;
+  padding-top: 20px;
+  padding-left: 210px;
+  padding-bottom: 50px;
+  margin-bottom: 0px;
+  display: block;
 }
 .footer-list .footer-link:hover,
 .footer-list .footer-link:focus {
   color: var(--accent-color);
+}
+/* portolio-html */
+.menu-block {
+  margin-top: 94px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.menu-port {
+  list-style: none;
+  border-radius: 4px;
+  /*  Making ul.menu a Flex container  */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
+}
+.menu-port > .menu-item:not(:last-child) {
+  margin-right: 8px;
+}
+.menu-port .menu-link {
+  display: inline-block;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  padding: 6px 24px;
+  /* identical to box height, or 162% */
+
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: #212121;
+  background-color: #f5f4fa;
+}
+.menu-port .menu-link:hover,
+.menu-port .menu-link:focus {
+  color: #fff;
+  background-color: var(--accent-color);
+}
+.port-box {
+  width: 1170px;
+  margin: 0 215px;
+}
+.port-list {
+  display: flex;
+  /* Make a flex container multiline */
+  flex-wrap: wrap;
+  /* Set gap between rows and columns */
+  gap: 30px;
+  margin-bottom: 94px;
+  padding: 0;
+  list-style: none;
+}
+.port-item h2 {
+  font-size: 18px;
+  line-height: 2;
+  padding-left: 24px;
+
+  letter-spacing: 0.06em;
+
+  color: var(--mainhead-color);
+}
+
+.port-item p {
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  padding-left: 24px;
+
+  color: var(--maintext-color);
+}
+
+.port-item {
+  /*  Set the width of the elements  */
+  flex: wrap;
+  width: 370px;
+  height: 404px;
+
+  background: #ffffff;
+  border: 1px solid #eeeeee;
 }
